@@ -9608,10 +9608,113 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // import react
 
-var App = function (_React$Component) {
-    _inherits(App, _React$Component);
+
+// import scss
+
+
+// import components
+
+var Header = function (_React$Component) {
+    _inherits(Header, _React$Component);
+
+    function Header() {
+        _classCallCheck(this, Header);
+
+        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+    }
+
+    _createClass(Header, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'container' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'row' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-sm col-md col-lg col-xl header' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Exchange-rates'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Header;
+}(_react2.default.Component);
+
+var Menu = function (_React$Component2) {
+    _inherits(Menu, _React$Component2);
+
+    function Menu() {
+        _classCallCheck(this, Menu);
+
+        return _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).apply(this, arguments));
+    }
+
+    _createClass(Menu, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'container' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'row' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-sm-3 col-md-3 col-lg-3 col-xl-3 first-btn' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Test 1'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-sm-3 col-md-3 col-lg-3 col-xl-3 second-btn' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Test 2'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-sm-3 col-md-3 col-lg-3 col-xl-3 third-btn' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Test 3'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'col-sm-3 col-md-3 col-lg-3 col-xl-3 fourth-btn' },
+                        _react2.default.createElement(
+                            'h1',
+                            null,
+                            'Test 4'
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Menu;
+}(_react2.default.Component);
+
+var App = function (_React$Component3) {
+    _inherits(App, _React$Component3);
 
     function App() {
         _classCallCheck(this, App);
@@ -9625,7 +9728,8 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                'hello'
+                _react2.default.createElement(Header, null),
+                _react2.default.createElement(Menu, null)
             );
         }
     }]);
@@ -22204,7 +22308,7 @@ exports = module.exports = __webpack_require__(186)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "h1 {\n  text-align: center; }\n\n.header {\n  border: 1px solid red; }\n", ""]);
 
 // exports
 
